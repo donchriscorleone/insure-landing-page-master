@@ -386,6 +386,25 @@
   right: 0;
 }
 
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.attribution a {
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.5s;
+  font-family: "Karla", sans-serif;
+  font-size: 1.4rem;
+}
+.attribution a:hover, .attribution a :visited {
+  color: #aaa;
+}
+
 .brands {
   display: flex;
   flex-direction: column;
