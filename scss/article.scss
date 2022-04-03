@@ -1,0 +1,48 @@
+@import './variables.scss';
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    text-align: center;
+
+    .btn-border {
+        z-index: 3;
+    }
+}
+
+.article__icon {
+    max-width: 70px;
+}
+
+.article__header {
+    font-family: $font-dm;
+    font-size: 1.4rem;
+    color: $dark-violet;
+}
+
+.article__context {
+    color: $dark-grayish-violet;
+    font-weight: 400;
+    font-family: $font-karla;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 1000px) {
+    .articles {
+        flex-direction: row;
+        column-gap: 30px;
+    }
+
+    .article {
+        align-items: flex-start;
+        text-align: left;
+    }
+}

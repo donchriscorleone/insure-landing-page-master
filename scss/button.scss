@@ -1,0 +1,93 @@
+@import './variables.scss';
+
+.btn {
+    text-transform: uppercase;
+    font-family: $font-karla;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-link {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.btn-nav {
+    padding: 10px 15px;
+    color: $dark-grayish-violet;
+    transition: all .4s;
+
+    &.btn-border {
+        color: $dark-violet;
+        border-color: $dark-violet;
+
+        &:hover {
+            background-color: $dark-violet;
+            color: $very-light-gray;
+
+        }
+    }
+
+    &:hover {
+        color: $dark-violet;
+        font-weight: 400;
+    }
+}
+
+.btn-txt-light {
+    color: $very-light-gray;
+}
+
+.btn-txt-dark-violet {
+    color: $very-dark-violet;
+}
+
+.btn-border {
+    padding: 10px 15px;
+    border: 2px solid $very-light-gray;
+    color: $very-light-gray;
+    transition: all .3s;
+
+    &:hover {
+        background-color: $very-dark-violet;
+        border: 2px solid $very-dark-violet;
+    }
+}
+
+.btn-border.btn-hover-white {
+    &:hover {
+        background-color: $very-light-gray;
+        border: 2px solid $very-light-gray;
+        color: $very-dark-violet;
+    }
+}
+
+.btn-logo {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+
+    &:hover {
+        background-color: $very-dark-violet;
+    }
+}
+
+.btn-logo-fb {
+    background-image: url('./../images/icon-facebook.svg');
+}
+
+.btn-logo-twitter {
+    background-image: url('./../images/icon-twitter.svg');
+}
+.btn-logo-pinterest {
+    background-image: url('./../images/icon-pinterest.svg');
+} 
+
+.btn-logo-instagram {
+    background-image: url('./../images/icon-instagram.svg');
+}

@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font-dm;
+}
+
+@import './button.scss';
+@import './list.scss';
+@import './header.scss';
+@import './block.scss';
+@import './article.scss';
+@import './footer.scss';
+
+.main {
+    display: grid;
+    row-gap: 20px;
+    padding: 20px 30px;
+    margin: 0 auto;
+
+    .main__header {
+        font-size: 3rem;
+        font-family: $font-dm;
+        color: $dark-violet;
+        text-align: center;
+        margin: 50px 0 70px;
+    }
+
+    .block {
+        margin-top: 90px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main {
+        row-gap: 50px;
+        padding: 40px 90px;
+        margin-bottom: 100px;
+    
+        .main__header {
+            text-align: left;
+        }
+    
+        .block {
+            margin-top: 120px;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@import './variables.scss';
+
+.header {
+    min-height: 100vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    height: 70px;
+
+    .list.list-inline {
+        display: none;
+    }
+}
+
+.nav__burger {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: 2px solid $dark-violet;
+
+    background-image: url('./../images/icon-hamburger.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav-open .nav__burger {
+    background-image: url('./../images/icon-close.svg');
+}
+
+.nav-modal {
+    display: none;
+}
+
+.nav-open + .nav-modal {
+    display: block;
+    padding: 20px 25px;
+    height: calc(100vh - 70px);
+    background-image: url('./../images/bg-pattern-mobile-nav.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: $dark-violet;
+
+    .list {
+        display: grid;
+        justify-items: center;
+        row-gap: 20px;
+
+        li {
+            width: 100%;
+            text-align: center;
+
+            .btn {
+                font-size: 1.4rem;
+                color: $very-light-gray;
+                max-width: 250px;
+            }
+
+            .btn-border {
+                border: 2px solid $very-light-gray;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.nav-open .header-intro {
+    display: none;
+}
+
+.header-intro {
+    display: grid;
+
+    .block {
+        width: 100%;
+    }
+
+    h1 {
+        line-height: 1.3;
+        font-size: 2.9rem;
+    }
+    p {
+        font-size: .8rem;
+        line-height: 1.8;
+        font-family: $font-karla;
+        color: $very-light-gray;
+    }
+}
+
+.header-intro img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    grid-row: 1 / 2;
+}
+.nav-open ~ .header-intro {
+    display: none;
+}
+
+
+@media screen and (min-width: 900px) {
+    .nav {
+        .list.list-inline {
+            display: flex;
+        }
+    }
+    .nav__burger {
+        display: none;
+    }
+
+    .header-intro {
+        position: relative;
+
+        h1, h2, h3, p {
+            width: 400px;
+            text-align: left;
+        }
+    }
+
+    .header-intro img{
+        position: absolute;
+        right: 150px;
+        top: 80px;
+    }
+}
